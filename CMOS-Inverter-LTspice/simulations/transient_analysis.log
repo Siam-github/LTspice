@@ -1,13 +1,13 @@
 LTspice 26.0.1 for Windows
 Circuit: D:\Git Projects\LTspice\CMOS-Inverter-LTspice\simulations\transient_analysis.net
-Start Time: Sat Mar 28 17:30:35 2026
+Start Time: Sat Mar 28 21:03:21 2026
 solver = Normal
 Maximum thread count: 8
 tnom = 27
 temp = 27
 method = trap
 Direct Newton iteration succeeded in finding operating point.
-Total elapsed time: 0.101 seconds.
+Total elapsed time: 0.100 seconds.
 
 Files loaded:
 D:\Git Projects\LTspice\CMOS-Inverter-LTspice\simulations\transient_analysis.net
@@ -15,3 +15,16 @@ C:\Users\USER\AppData\Local\LTspice\lib\cmp\standard.mos
 D:\Git Projects\LTspice\CMOS-Inverter-LTspice\models\nmos_model.inc
 D:\Git Projects\LTspice\CMOS-Inverter-LTspice\models\pmos_model.inc
 
+time1: time =1.05e-08 at 1.05e-08
+time2: time =1.31304888096e-08 at 1.31304888096e-08
+tphl: time2-time1=2.63048880956e-09
+time3: time =3.55e-08 at 3.55e-08
+time4: time =3.82867879385e-08 at 3.82867879385e-08
+tplh: time4-time3=2.78678793851e-09
+delay: (tPHL+tPLH)/2=2.70863837404e-09
+timea: time =1.12666746303e-08 at 1.12666746303e-08
+timeb: time =1.53742529309e-08 at 1.53742529309e-08
+fall_time: timeb-timea=4.10757830064e-09
+timec: time =3.63369286791e-08 at 3.63369286791e-08
+timed: time =4.09756001874e-08 at 4.09756001874e-08
+rise_time: timed-timec=4.63867150831e-09

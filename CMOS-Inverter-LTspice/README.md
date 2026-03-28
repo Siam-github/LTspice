@@ -2,15 +2,15 @@
 
 ![LTspice](https://img.shields.io/badge/Tool-LTspice-blue)
 ![VLSI](https://img.shields.io/badge/Domain-VLSI-green)
-![Status](https://img.shields.io/badge/Project-Running-brightgreen)
+![Status](https://img.shields.io/badge/Project-Ongoing-brightgreen)
 
 ---
 
 ## 📌 Overview
 
-This project presents the design and analysis of a CMOS inverter using LTspice. The work includes DC, AC, and transient analysis along with propagation delay and power consumption evaluation.
+This project presents the design and analysis of a CMOS inverter using LTspice. The work includes DC, AC, and transient analysis along with propagation delay ( under different load Capacitance ), switching threshold or midpoint voltage ( different w/L ratio), power consumption, gain, noise margin.
 
----
+---------*****####*****
 
 ## ⚙️ Tools & Technologies
 
