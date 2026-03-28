@@ -2,7 +2,7 @@
 
 ![LTspice](https://img.shields.io/badge/Tool-LTspice-blue)
 ![VLSI](https://img.shields.io/badge/Domain-VLSI-green)
-![Status](https://img.shields.io/badge/Project-Completed-brightgreen)
+![Status](https://img.shields.io/badge/Project-Running-brightgreen)
 
 ---
 
