@@ -1,0 +1,32 @@
+CMOS-Inverter-LTspice/
+│
+├── README.md
+├── docs/
+│   ├── theory.md
+│   ├── equations.md
+│
+├── models/
+│   ├── pmos_model.inc
+│   ├── nmos_model.inc
+│
+├── circuits/
+│   ├── cmos_inverter.asc
+│   ├── cmos_inverter.net
+│
+├── simulations/
+│   ├── dc_analysis.asc
+│   ├── ac_analysis.asc
+│   ├── transient_analysis.asc
+│
+├── results/
+│   ├── dc_transfer_curve.png
+│   ├── ac_response.png
+│   ├── transient_waveform.png
+│
+├── calculations/
+│   ├── propagation_delay.md
+│   ├── power_consumption.md
+│
+└── figures/
+    ├── schematic.png
+    ├── waveform_annotations.png
