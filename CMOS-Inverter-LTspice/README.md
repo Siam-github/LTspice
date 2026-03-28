@@ -127,7 +127,7 @@ figures/
 ## 👤 Author
 
 **Md. Masudun Nabi Siam**
-EEE, BSMRSTU
+EEE, GSTU
 Aspiring Analog & Mixed-Signal VLSI Engineer
 
 ---
