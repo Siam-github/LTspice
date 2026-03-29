@@ -8,8 +8,20 @@
 
 ## 📌 Overview
 
-This project presents the design and analysis of a CMOS inverter using LTspice. The work includes DC, AC, and transient analysis along with propagation delay ( under different load Capacitance ), switching threshold or midpoint voltage ( different w/L ratio), power consumption, gain, noise margin.
+<p align="justify">
+This project presents the <b>design and analysis of a CMOS inverter</b> using LTspice. 
+The study covers comprehensive simulations including <b>DC, AC, and transient analysis</b> to evaluate circuit performance under different conditions.
+</p>
 
+<p align="justify">
+Key performance metrics such as <b>propagation delay</b> are analyzed under varying <b>load capacitances</b>, while the 
+<b>switching threshold (midpoint voltage)</b> is investigated for different <b>W/L ratios</b> of NMOS and PMOS transistors.
+</p>
+
+<p align="justify">
+Additionally, the project explores important parameters including <b>power consumption</b>, <b>voltage gain</b>, and 
+<b>noise margin</b>, providing a complete understanding of CMOS inverter behavior for VLSI design applications.
+</p>
 ---
 
 ## ⚙️ Tools & Technologies
@@ -35,8 +47,10 @@ The transistor sizing is performed using the gm/Id methodology to achieve an opt
 ## 🔌 Circuit Description
 
 * CMOS inverter using NMOS and PMOS
+* NMOS W/L: 500n/50n
+* PMOS W/L: 1u/50n
 * Supply Voltage: 1V
-* Load Capacitance: 10pF
+* Load Capacitance: 1pF
 
 ---
 
@@ -66,16 +80,8 @@ The transistor sizing is performed using the gm/Id methodology to achieve an opt
 ## ⏱️ Propagation Delay
 
 <p align="center">
-  <img src="figures/delay.png" alt="Propagation Delay Waveform" width="500"/>
+ 	 <img src="figures/delay.png" alt="Propagation Delay Waveform" width="500"/>
 </p>
-
-![schematic](figures/delay.png)
-
-
-```math
-t_p = \frac{t_{PLH} + t_{PHL}}{2}
-
-```
 
 Measured using LTspice `.measure` commands.
 
@@ -87,32 +93,58 @@ Measured using LTspice `.measure` commands.
 P = V_{DD} \times I_{avg}
 
 ```
-
 Includes both dynamic and static power components.
 
 ---
 
 ## 📈 Results
+<h2 align="center">📈 Results</h2>
 
-| Parameter         | Value |
-| ----------------- | ----- |
-| VDD               | 1V    |
-| Propagation Delay | XX ps |
-| Power Consumption | XX µW |
-| Gain              | XX    |
-
+<table align="center" border="1" cellpadding="8" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>V<sub>DD</sub></b></td>
+      <td>1 V</td>
+    </tr>
+    <tr>
+      <td><b>Propagation Delay</b></td>
+      <td>2.70 ns</td>
+    </tr>
+    <tr>
+      <td><b>Power Consumption</b></td>
+      <td>XX µW</td>
+    </tr>
+    <tr>
+      <td><b>Gain</b></td>
+      <td>11.8</td>
+    </tr>
+  </tbody>
+</table>
 ---
 
 ## 🖼️ Figures
 
 ### CMOS Inverter Schematic
 
-![schematic](figures/schematic.png)
+![inverter_schematic](figures/schematic.png)
+
+### DC Analysis
+
+![waveform](results/vtc_curve.png)
+![waveform](results/different_W-L_ratio.png)
 
 ### Transient Response
 
 ![waveform](results/transient_waveform.png)
 ![waveform](results/propagation_delay.png)
+![waveform](results/delay_varying_load.png)
+![waveform](results/delay_varying_load-full.png)
 
 ---
 
