@@ -22,7 +22,6 @@ Key performance metrics such as <b>propagation delay</b> are analyzed under vary
 Additionally, the project explores important parameters including <b>power consumption</b>, <b>voltage gain</b>, and 
 <b>noise margin</b>, providing a complete understanding of CMOS inverter behavior for VLSI design applications.
 </p>
----
 
 ## ⚙️ Tools & Technologies
 
@@ -87,18 +86,61 @@ Measured using LTspice `.measure` commands.
 
 ---
 
-## ⚡ Power Consumption
+## ⚡ Power Dissipation in CMOS
+
+In CMOS circuits, power dissipation occurs due to three main components:
+
+1. **Dynamic Power** – dissipated only during switching  
+2. **Leakage Power** – caused by leakage current and exists continuously  
+3. **Short-Circuit Power** – occurs when both NMOS and PMOS conduct during switching  
+
+---
+
+### 📌 Total Power Consumption
+
+```math
+P_{total} = P_{switching} + P_{short-circuit} + P_{leakage}
+```
 
 ```math
 P = V_{DD} \times I_{avg}
-
-```
 Includes both dynamic and static power components.
+```
+### 🔢 Power Components
+
+- **Switching Power:**
+  ```math
+  P_{switching} = C_{Load} \cdot V_{DD}^2 \cdot f
+  ```
+
+- **Short-Circuit Power:**
+  ```math
+  P_{short-circuit} = t_{sc} \cdot V_{DD} \cdot I_{sc}
+  ```
+
+- **Leakage Power:**
+  ```math
+  P_{leakage} = V_{DD} \cdot I_{leakage}
+  ```
+
+---
+**CLoad**: Capacitive loading due to output node, interconnects, and fan-out 
+**VDD**     : Supply voltage 
+**f**          :  Switching frequency 
+**tsc**    :  Short-circuit duration in CMOS 
+**Isc**    :  Short-circuit current from PMOS to NMOS 
+**Ileakage**:    Leakage current
+---
+
+
+- Dynamic power dominates at **high frequency**
+- Leakage power becomes significant in **deep submicron technologies**
+- Short-circuit power depends on **input transition time**
 
 ---
 
 ## 📈 Results
-<h2 align="center">📈 Results</h2>
+<h2 align="center"></h2>
 
 <table align="center" border="1" cellpadding="8" cellspacing="0">
   <thead>
