@@ -65,6 +65,10 @@ The transistor sizing is performed using the gm/Id methodology to achieve an opt
 
 ## ⏱️ Propagation Delay
 
+<p align="center">
+  <img src="figures/delay.png" alt="Propagation Delay Waveform" width="500"/>
+</p>
+
 ![schematic](figures/delay.png)
 
 
