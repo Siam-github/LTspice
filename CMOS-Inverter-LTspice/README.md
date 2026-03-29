@@ -11,26 +11,25 @@
 <p align="justify">
 This project presents the <b>design and analysis of a CMOS inverter</b> using LTspice. 
 The study covers comprehensive simulations including <b>DC, AC, and transient analysis</b> to evaluate circuit performance under different conditions.
+</p>
+
 <p align="justify">
 Key performance metrics such as <b>propagation delay</b> are analyzed under varying <b>load capacitances</b>, while the 
 <b>switching threshold (midpoint voltage)</b> is investigated for different <b>W/L ratios</b> of NMOS and PMOS transistors.
 </p>
-</p>
-
-
-
 
 <p align="justify">
 Additionally, the project explores important parameters including <b>power consumption</b>, <b>voltage gain</b>, and 
 <b>noise margin</b>, providing a complete understanding of CMOS inverter behavior for VLSI design applications.
 </p>
 
+
 ## ⚙️ Tools & Technologies
 
 * LTspice
 * BSIM3 (Berkeley Short-Channel IGFET Model)
 
----
+
 
 ## 🧠 Design Methodology
 
@@ -43,7 +42,7 @@ The transistor sizing is performed using the gm/Id methodology to achieve an opt
 * PMOS width: 2 µm
 * Reason: Mobility ratio compensation for symmetric switching
 
----
+
 
 ## 🔌 Circuit Description
 
@@ -53,7 +52,7 @@ The transistor sizing is performed using the gm/Id methodology to achieve an opt
 * Supply Voltage: 1V
 * Load Capacitance: 1pF
 
----
+
 
 ## 📊 Simulations Performed
 
@@ -76,7 +75,7 @@ The transistor sizing is performed using the gm/Id methodology to achieve an opt
 * Propagation delay 
 * Power measurement
 
----
+
 
 ## ⏱️ Propagation Delay
 
@@ -86,7 +85,7 @@ The transistor sizing is performed using the gm/Id methodology to achieve an opt
 
 Measured using LTspice `.measure` commands.
 
----
+
 
 ## ⚡ Power Dissipation in CMOS
 
@@ -106,31 +105,35 @@ P_{total} = P_{switching} + P_{short-circuit} + P_{leakage}
 ```math
 P = V_{DD} \times I_{avg}
 
-**Includes both dynamic and static power components.**
 ```
+Includes both dynamic and static power components.
+
 ### 🔢 Power Components
 
 - **Switching Power:**
+
   ```math
   P_{switching} = C_{Load} \cdot V_{DD}^2 \cdot f
+
   ```
 
 - **Short-Circuit Power:**
   ```math
   P_{short-circuit} = t_{sc} \cdot V_{DD} \cdot I_{sc}
+
   ```
 
 - **Leakage Power:**
 
-  $$\P_{leakage} = V_{DD} \cdot I_{leakage}&&
+  $`P_{leakage} = V_{DD} \cdot I_{leakage}`&
  
 Where
-*CLoad: Capacitive loading due to output node, interconnects, and fan-out 
-*VDD     : Supply voltage 
-*f          :  Switching frequency 
-*tsc    :  Short-circuit duration in CMOS 
-*Isc    :  Short-circuit current from PMOS to NMOS 
-*Ileakage:    Leakage current
+* CLoad: Capacitive loading due to output node, interconnects, and fan-out 
+* VDD     : Supply voltage 
+* f          :  Switching frequency 
+* tsc    :  Short-circuit duration in CMOS 
+* Isc    :  Short-circuit current from PMOS to NMOS 
+* Ileakage:    Leakage current
 
 - Dynamic power dominates at **high frequency**
 - Leakage power becomes significant in **deep submicron technologies**
@@ -138,7 +141,6 @@ Where
 
 
 ## 📈 Results
-<h2 align="center"</h2>
 
 <table align="center" border="1" cellpadding="8" cellspacing="0">
   <thead>
@@ -185,7 +187,6 @@ Where
 ![waveform](results/delay_varying_load.png)
 ![waveform](results/delay_varying_load-full.png)
 
----
 
 ## 📂 Project Structure
 
