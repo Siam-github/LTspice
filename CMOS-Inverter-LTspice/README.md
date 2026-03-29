@@ -65,6 +65,9 @@ The transistor sizing is performed using the gm/Id methodology to achieve an opt
 
 ## ⏱️ Propagation Delay
 
+![schematic](figures/delay.png)
+
+
 ```math
 t_p = \frac{t_{PLH} + t_{PHL}}{2}
 
