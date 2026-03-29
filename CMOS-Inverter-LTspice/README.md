@@ -89,12 +89,15 @@ Measured using LTspice `.measure` commands.
 
 ## ⚡ Power Dissipation in CMOS
 
+![power_dissipation](figures/power_dissipation_inverter.png)
+
 In CMOS circuits, power dissipation occurs due to three main components:
 
 1. **Dynamic Power** – dissipated only during switching  
 2. **Leakage Power** – caused by leakage current and exists continuously  
 3. **Short-Circuit Power** – occurs when both NMOS and PMOS conduct during switching  
 
+```
 ### 📌 Total Power Consumption
 
 ```math
@@ -113,20 +116,25 @@ Includes both dynamic and static power components.
 - **Switching Power:**
 
   ```math
+
   P_{switching} = C_{Load} \cdot V_{DD}^2 \cdot f
 
   ```
 
 - **Short-Circuit Power:**
   ```math
+
   P_{short-circuit} = t_{sc} \cdot V_{DD} \cdot I_{sc}
 
   ```
 
 - **Leakage Power:**
 
-  $`P_{leakage} = V_{DD} \cdot I_{leakage}`&
- 
+  ```math
+
+P_{leakage} = V_{DD} \cdot I_{leakage}
+
+``` 
 Where
 * CLoad: Capacitive loading due to output node, interconnects, and fan-out 
 * VDD     : Supply voltage 
@@ -139,6 +147,7 @@ Where
 - Leakage power becomes significant in **deep submicron technologies**
 - Short-circuit power depends on **input transition time**
 
+```
 
 ## 📈 Results
 
