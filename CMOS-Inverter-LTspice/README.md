@@ -11,12 +11,14 @@
 <p align="justify">
 This project presents the <b>design and analysis of a CMOS inverter</b> using LTspice. 
 The study covers comprehensive simulations including <b>DC, AC, and transient analysis</b> to evaluate circuit performance under different conditions.
-</p>
-
 <p align="justify">
 Key performance metrics such as <b>propagation delay</b> are analyzed under varying <b>load capacitances</b>, while the 
 <b>switching threshold (midpoint voltage)</b> is investigated for different <b>W/L ratios</b> of NMOS and PMOS transistors.
 </p>
+</p>
+
+
+
 
 <p align="justify">
 Additionally, the project explores important parameters including <b>power consumption</b>, <b>voltage gain</b>, and 
@@ -94,17 +96,17 @@ In CMOS circuits, power dissipation occurs due to three main components:
 2. **Leakage Power** – caused by leakage current and exists continuously  
 3. **Short-Circuit Power** – occurs when both NMOS and PMOS conduct during switching  
 
----
-
 ### 📌 Total Power Consumption
 
 ```math
 P_{total} = P_{switching} + P_{short-circuit} + P_{leakage}
+
 ```
 
 ```math
 P = V_{DD} \times I_{avg}
-Includes both dynamic and static power components.
+
+**Includes both dynamic and static power components.**
 ```
 ### 🔢 Power Components
 
@@ -119,28 +121,24 @@ Includes both dynamic and static power components.
   ```
 
 - **Leakage Power:**
-  ```math
-  P_{leakage} = V_{DD} \cdot I_{leakage}
-  ```
 
----
-**CLoad**: Capacitive loading due to output node, interconnects, and fan-out 
-**VDD**     : Supply voltage 
-**f**          :  Switching frequency 
-**tsc**    :  Short-circuit duration in CMOS 
-**Isc**    :  Short-circuit current from PMOS to NMOS 
-**Ileakage**:    Leakage current
----
-
+  $$\P_{leakage} = V_{DD} \cdot I_{leakage}&&
+ 
+Where
+*CLoad: Capacitive loading due to output node, interconnects, and fan-out 
+*VDD     : Supply voltage 
+*f          :  Switching frequency 
+*tsc    :  Short-circuit duration in CMOS 
+*Isc    :  Short-circuit current from PMOS to NMOS 
+*Ileakage:    Leakage current
 
 - Dynamic power dominates at **high frequency**
 - Leakage power becomes significant in **deep submicron technologies**
 - Short-circuit power depends on **input transition time**
 
----
 
 ## 📈 Results
-<h2 align="center"></h2>
+<h2 align="center"</h2>
 
 <table align="center" border="1" cellpadding="8" cellspacing="0">
   <thead>
@@ -168,7 +166,6 @@ Includes both dynamic and static power components.
     </tr>
   </tbody>
 </table>
----
 
 ## 🖼️ Figures
 
