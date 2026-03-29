@@ -10,13 +10,12 @@
 
 This project presents the design and analysis of a CMOS inverter using LTspice. The work includes DC, AC, and transient analysis along with propagation delay ( under different load Capacitance ), switching threshold or midpoint voltage ( different w/L ratio), power consumption, gain, noise margin.
 
----------*****####*****
+---
 
 ## ⚙️ Tools & Technologies
 
 * LTspice
-* CMOS PTM Models
-* Analog VLSI Design Concepts
+* BSIM3 (Berkeley Short-Channel IGFET Model)
 
 ---
 
@@ -36,8 +35,8 @@ The transistor sizing is performed using the gm/Id methodology to achieve an opt
 ## 🔌 Circuit Description
 
 * CMOS inverter using NMOS and PMOS
-* Supply Voltage: 1.8V
-* Load Capacitance: 10fF
+* Supply Voltage: 1V
+* Load Capacitance: 10pF
 
 ---
 
@@ -47,6 +46,9 @@ The transistor sizing is performed using the gm/Id methodology to achieve an opt
 
 * Voltage Transfer Characteristics (VTC)
 * Switching Threshold (VM)
+* Noise Margin 
+* W/L ratio 
+* Crossing Current (Icross)
 
 ### ✅ AC Analysis
 
@@ -56,15 +58,17 @@ The transistor sizing is performed using the gm/Id methodology to achieve an opt
 ### ✅ Transient Analysis
 
 * Switching behavior
-* Propagation delay measurement
+* Propagation delay 
+* Power measurement
 
 ---
 
 ## ⏱️ Propagation Delay
 
-[
+```math
 t_p = \frac{t_{PLH} + t_{PHL}}{2}
-]
+
+```
 
 Measured using LTspice `.measure` commands.
 
@@ -72,9 +76,10 @@ Measured using LTspice `.measure` commands.
 
 ## ⚡ Power Consumption
 
-[
+```math
 P = V_{DD} \times I_{avg}
-]
+
+```
 
 Includes both dynamic and static power components.
 
@@ -84,7 +89,7 @@ Includes both dynamic and static power components.
 
 | Parameter         | Value |
 | ----------------- | ----- |
-| VDD               | 1.8V  |
+| VDD               | 1V    |
 | Propagation Delay | XX ps |
 | Power Consumption | XX µW |
 | Gain              | XX    |
@@ -100,6 +105,7 @@ Includes both dynamic and static power components.
 ### Transient Response
 
 ![waveform](results/transient_waveform.png)
+![waveform](results/propagation_delay.png)
 
 ---
 
@@ -112,6 +118,7 @@ simulations/
 results/
 calculations/
 figures/
+simulations/
 ```
 
 ---

@@ -1,0 +1,18 @@
+LTspice 26.0.1 for Windows
+Circuit: D:\Git Projects\LTspice\CMOS-Inverter-LTspice\simulations\ac_analysis.net
+Start Time: Sun Mar 29 13:26:49 2026
+solver = Normal
+Maximum thread count: 8
+tnom = 27
+temp = 27
+method = trap
+Direct Newton iteration succeeded in finding operating point.
+Total elapsed time: 0.093 seconds.
+
+Files loaded:
+D:\Git Projects\LTspice\CMOS-Inverter-LTspice\simulations\ac_analysis.net
+C:\Users\USER\AppData\Local\LTspice\lib\cmp\standard.mos
+D:\Git Projects\LTspice\CMOS-Inverter-LTspice\models\nmos_model.inc
+D:\Git Projects\LTspice\CMOS-Inverter-LTspice\models\pmos_model.inc
+
+freq: mag(V(vout))=8.356  AT 9962000.36667

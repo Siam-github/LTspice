@@ -1,12 +1,12 @@
 LTspice 26.0.1 for Windows
 Circuit: D:\Git Projects\LTspice\CMOS-Inverter-LTspice\simulations\dc_analysis_power.net
-Start Time: Sat Mar 28 23:14:44 2026
+Start Time: Sun Mar 29 10:52:35 2026
 solver = Normal
 Maximum thread count: 8
 tnom = 27
 temp = 27
 method = trap
-Total elapsed time: 0.170 seconds.
+Total elapsed time: 0.537 seconds.
 
 Files loaded:
 D:\Git Projects\LTspice\CMOS-Inverter-LTspice\simulations\dc_analysis_power.net
