@@ -1,0 +1,15 @@
+LTspice 26.0.1 for Windows
+Circuit: D:\Git Projects\LTspice\MOSFET-Characteristics-LTspice\NMOS\nmos_Id_Vgs.net
+Start Time: Fri Apr 10 18:08:09 2026
+solver = Normal
+Maximum thread count: 8
+tnom = 27
+temp = 27
+method = trap
+Total elapsed time: 0.085 seconds.
+
+Files loaded:
+D:\Git Projects\LTspice\MOSFET-Characteristics-LTspice\NMOS\nmos_Id_Vgs.net
+C:\Users\USER\AppData\Local\LTspice\lib\cmp\standard.mos
+D:\Git Projects\LTspice\MOSFET-Characteristics-LTspice\models\nmos_model.inc
+

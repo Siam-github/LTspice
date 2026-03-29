@@ -1,61 +1,58 @@
-*
-* Predictive Technology Model Beta Version
-* 180nm PMOS SPICE Parametersv (normal one)
-*
-
-.model PMOS_PTM PMOS
-+Level = 49
-
-+Lint = 3.e-08 Tox = 4.2e-09 
-+Vth0 = -0.42 Rdsw = 450 
-
-+lmin=1.8e-7 lmax=1.8e-7 wmin=1.8e-7 wmax=1.0e-4 Tref=27.0 version =3.1
-+Xj= 7.0000000E-08         Nch= 5.9200000E+17 
-+lln= 1.0000000            lwn= 1.0000000              wln= 0.00
-+wwn= 0.00                 ll= 0.00
-+lw= 0.00                  lwl= 0.00                   wint= 0.00
-+wl= 0.00                  ww= 0.00                    wwl= 0.00
-+Mobmod=  1                binunit= 2                  xl= 0.00
-+xw= 0.00                  
-+binflag=  0               Dwg= 0.00                   Dwb= 0.00 
-
-+ACM= 0                    ldif=0.00                   hdif=0.00
-+rsh= 0                    rd= 0                       rs= 0
-+rsc= 0                    rdc= 0
-
-+K1= 0.5560000             K2= 0.00 
-+K3= 0.00                  Dvt0= 11.2000000            Dvt1= 0.7200000 
-+Dvt2= -1.0000000E-02      Dvt0w= 0.00                 Dvt1w= 0.00 
-+Dvt2w= 0.00               Nlx= 9.5000000E-08          W0= 0.00 
-+K3b= 0.00                 Ngate= 5.0000000E+20 
-
-+Vsat= 1.0500000E+05       Ua= -1.2000000E-10          Ub= 1.0000000E-18 
-+Uc= -2.9999999E-11        Prwb= 0.00 
-+Prwg= 0.00                Wr= 1.0000000               U0= 8.0000000E-03 
-+A0= 2.1199999             Keta= 2.9999999E-02         A1= 0.00 
-+A2= 0.4000000             Ags= -0.1000000             B0= 0.00 
-+B1= 0.00 
-
-+Voff= -6.40000000E-02      NFactor= 1.4000000          Cit= 0.00 
-+Cdsc= 0.00                Cdscb= 0.00                 Cdscd= 0.00 
-+Eta0= 8.5000000           Etab= 0.00                  Dsub= 2.8000000 
-
-+Pclm= 2.0000000           Pdiblc1= 0.1200000          Pdiblc2= 8.0000000E-05 
-+Pdiblcb= 0.1450000        Drout= 5.0000000E-02        Pscbe1= 1.0000000E-20 
-+Pscbe2= 1.0000000E-20     Pvag= -6.0000000E-02        Delta= 1.0000000E-02 
-+Alpha0= 0.00              Beta0= 30.0000000 
-
-+kt1= -0.3700000           kt2= -4.0000000E-02         At= 5.5000000E+04 
-+Ute= -1.4800000           Ua1= 9.5829000E-10          Ub1= -3.3473000E-19 
-+Uc1= 0.00                 Kt1l= 4.0000000E-09         Prt= 0.00 
-
-+Cj= 0.00138               Mj= 1.05                    Pb= 1.24
-+Cjsw= 1.44E-09            Mjsw= 0.43                  Php= 0.841
-+Cta= 0.00093              Ctp= 0                      Pta= 0.00153
-+Ptp= 0                    JS=1.50E-08                 JSW=2.50E-13
-+N=1.0                     Xti=3.0                     Cgdo=2.786E-10
-+Cgso=2.786E-10            Cgbo=0.0E+00                Capmod= 2
-+NQSMOD= 0                 Elm= 5                      Xpart= 1
-+Cgsl= 1.6E-10             Cgdl= 1.6E-10               Ckappa= 2.886
-+Cf= 1.058e-10             Clc= 0.0000001              Cle= 0.6
-+Dlc= 3E-08                Dwc= 0                      Vfbcv= -1
+.model  P_50n  pmos  level = 54
++binunit = 1            paramchk= 1            mobmod  = 0          
++capmod  = 2            igcmod  = 1            igbmod  = 1            geomod  = 0          
++diomod  = 1            rdsmod  = 0            rbodymod= 1            rgatemod= 1          
++permod  = 1            acnqsmod= 0            trnqsmod= 0          
++tnom    = 27           toxe    = 1.4e-009     toxp    = 7e-010       toxm    = 1.4e-009   
++epsrox  = 3.9          wint    = 5e-009       lint    = 1.2e-008   
++ll      = 0            wl      = 0            lln     = 1            wln     = 1          
++lw      = 0            ww      = 0            lwn     = 1            wwn     = 1          
++lwl     = 0            wwl     = 0            xpart   = 0            toxref  = 1.4e-009   
++vth0    = -0.22        k1      = 0.39         k2      = 0.05         k3      = 0          
++k3b     = 0            w0      = 2.5e-006     dvt0    = 3.9          dvt1    = 0.635        
++dvt2    = -0.032       dvt0w   = 0            dvt1w   = 0            dvt2w   = 0          
++dsub    = 0.7          minv    = 0.05         voffl   = 0            dvtp0   = 0.5e-008     
++dvtp1   = 0.05         lpe0    = 5.75e-008    lpeb    = 2.3e-010     xj      = 2e-008     
++ngate   = 5e+020       ndep    = 2.8e+018     nsd     = 1e+020       phin    = 0          
++cdsc    = 0.000258     cdscb   = 0            cdscd   = 6.1e-008     cit     = 0          
++voff    = -0.15        nfactor = 2            eta0    = 0.15         etab    = 0          
++vfb     = 0.55         u0      = 0.0095       ua      = 1.6e-009     ub      = 8e-018     
++uc      = 4.6e-013     vsat    = 90000        a0      = 1.2          ags     = 1e-020     
++a1      = 0            a2      = 1            b0      = -1e-020      b1      = 0          
++keta    = -0.047       dwg     = 0            dwb     = 0            pclm    = 0.55       
++pdiblc1 = 0.03         pdiblc2 = 0.0055       pdiblcb = 3.4e-008     drout   = 0.56       
++pvag    = 1e-020       delta   = 0.014        pscbe1  = 8.14e+008    pscbe2  = 9.58e-007  
++fprout  = 0.2          pdits   = 0.2          pditsd  = 0.23         pditsl  = 2.3e+006   
++rsh     = 3            rdsw    = 250          rsw     = 160          rdw     = 160        
++rdswmin = 0            rdwmin  = 0            rswmin  = 0            prwg    = 3.22e-008  
++prwb    = 6.8e-011     wr      = 1            alpha0  = 0.074        alpha1  = 0.005      
++beta0   = 30           agidl   = 0.0002       bgidl   = 2.1e+009     cgidl   = 0.0002     
++egidl   = 0.8          
++aigbacc = 0.012        bigbacc = 0.0028       cigbacc = 0.002
++nigbacc = 1            aigbinv = 0.014        bigbinv = 0.004        cigbinv = 0.004
++eigbinv = 1.1          nigbinv = 3            aigc    = 0.69         bigc    = 0.0012
++cigc    = 0.0008       aigsd   = 0.0087       bigsd   = 0.0012       cigsd   = 0.0008
++nigc    = 1            poxedge = 1            pigcd   = 1            ntox    = 1
++xrcrg1  = 12           xrcrg2  = 5          
++cgso    = 7.43e-010    cgdo    = 7.43e-010    cgbo    = 2.56e-011    cgdl    = 1e-014     
++cgsl    = 1e-014       ckappas = 0.5          ckappad = 0.5          acde    = 1          
++moin    = 15           noff    = 0.9          voffcv  = 0.02       
++kt1     = -0.19        kt1l    = 0            kt2     = -0.052        ute     = -1.5
++ua1     = -1e-009      ub1     = 2e-018       uc1     = 0             prt     = 0
++at      = 33000
++fnoimod = 1            tnoimod = 0          
++jss     = 0.0001       jsws    = 1e-011       jswgs   = 1e-010       njs     = 1          
++ijthsfwd= 0.01         ijthsrev= 0.001        bvs     = 10           xjbvs   = 1          
++jsd     = 0.0001       jswd    = 1e-011       jswgd   = 1e-010       njd     = 1          
++ijthdfwd= 0.01         ijthdrev= 0.001        bvd     = 10           xjbvd   = 1          
++pbs     = 1            cjs     = 0.0005       mjs     = 0.5          pbsws   = 1          
++cjsws   = 5e-010       mjsws   = 0.33         pbswgs  = 1            cjswgs  = 5e-010     
++mjswgs  = 0.33         pbd     = 1            cjd     = 0.0005       mjd     = 0.5        
++pbswd   = 1            cjswd   = 5e-010       mjswd   = 0.33         pbswgd  = 1          
++cjswgd  = 5e-010       mjswgd  = 0.33         tpb     = 0.005        tcj     = 0.001      
++tpbsw   = 0.005        tcjsw   = 0.001        tpbswg  = 0.005        tcjswg  = 0.001      
++xtis    = 3            xtid    = 3          
++dmcg    = 0e-006       dmci    = 0e-006       dmdg    = 0e-006       dmcgt   = 0e-007     
++dwj     = 0e-008     	xgw     = 0e-007       xgl     = 0e-008     
++rshg    = 0.4          gbmin   = 1e-010       rbpb    = 5            rbpd    = 15         
++rbps    = 15           rbdb    = 15           rbsb    = 15           ngcon   = 1   

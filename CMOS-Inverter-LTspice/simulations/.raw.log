@@ -1,0 +1,6 @@
+LTspice 26.0.1 for Windows
+Circuit: D:\Git Projects\LTspice\CMOS-Inverter-LTspice\simulations\.net
+Start Time: Tue Apr  7 21:01:51 2026
+D:\Git Projects\LTspice\CMOS-Inverter-LTspice\simulations\.net(9): No such instance.
+.dc Vds 0 1 5m
+    ^^^

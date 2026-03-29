@@ -128,7 +128,7 @@ Includes both dynamic and static power components.
   ```
 
 - **Leakage Power:**
-  ```math
+```math
 
 P_{leakage} = V_{DD} \cdot I_{leakage}
 
@@ -175,6 +175,8 @@ Where
     </tr>
   </tbody>
 </table>
+
+
 
 ## 🖼️ Figures
 
