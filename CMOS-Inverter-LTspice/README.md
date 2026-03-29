@@ -97,7 +97,7 @@ In CMOS circuits, power dissipation occurs due to three main components:
 2. **Leakage Power** – caused by leakage current and exists continuously  
 3. **Short-Circuit Power** – occurs when both NMOS and PMOS conduct during switching  
 
-```
+
 ### 📌 Total Power Consumption
 
 ```math
@@ -114,7 +114,6 @@ Includes both dynamic and static power components.
 ### 🔢 Power Components
 
 - **Switching Power:**
-
   ```math
 
   P_{switching} = C_{Load} \cdot V_{DD}^2 \cdot f
@@ -129,12 +128,12 @@ Includes both dynamic and static power components.
   ```
 
 - **Leakage Power:**
-
   ```math
 
 P_{leakage} = V_{DD} \cdot I_{leakage}
 
 ``` 
+
 Where
 * CLoad: Capacitive loading due to output node, interconnects, and fan-out 
 * VDD     : Supply voltage 
@@ -147,7 +146,6 @@ Where
 - Leakage power becomes significant in **deep submicron technologies**
 - Short-circuit power depends on **input transition time**
 
-```
 
 ## 📈 Results
 
@@ -209,7 +207,7 @@ figures/
 simulations/
 ```
 
----
+
 
 ## 🚀 Future Work
 
@@ -217,7 +215,7 @@ simulations/
 * Parasitic extraction
 * Monte Carlo analysis
 
----
+
 
 ## 👤 Author
 
@@ -225,4 +223,3 @@ simulations/
 EEE, GSTU
 Aspiring Analog & Mixed-Signal VLSI Engineer
 
----
