@@ -1,226 +1,154 @@
-\\# Common Source Amplifier Configurations
+\# Common Source Amplifier Configurations
 
 
 
-\\## Overview
+\## Overview
 
-
-
-There are multiple design configurations for a \\\*\\\*Common Source (CS)
-
-amplifier\\\*\\\*.
-
-
+There are multiple design configurations for a \*\*Common Source (CS) amplifier\*\*.
 
 The primary design decisions involve:
 
+\- Drain load selection
 
+\- Biasing network design
 
-\\- Drain load selection
 
 
+\---
 
-\\- Biasing network design
 
 
+\## What is an Active Load?
 
-\-–
 
 
+In MOSFET amplifier circuits, instead of using a passive resistor, an \*\*active component\*\* (such as a MOSFET or a current mirror) is used to enhance amplifier performance.
 
-\\## What is an Active Load?
 
 
+This active element is referred to as an \*\*Active Load\*\*.
 
-In MOSFET amplifier circuits, instead of using a passive resistor, an
 
-\\\*\\\*active component\\\*\\\* (such as a MOSFET or a current mirror) is used
 
-to enhance amplifier performance.
+\---
 
 
 
-This active element is referred to as an \\\*\\\*Active Load\\\*\\\*.
+\## Why Use an Active Load?
 
 
 
-\-–
+Active loads are widely used in \*\*integrated circuits (ICs)\*\* due to:
 
 
 
-\\## Why Use an Active Load?
+\- \*\*Area efficiency\*\*: Resistors consume large silicon area
 
+\- \*\*Power efficiency\*\*: Lower voltage drop compared to resistors
 
+\- \*\*Higher gain capability\*\*
 
-Active loads are widely used in \\\*\\\*integrated circuits (ICs)\\\*\\\* due
 
-to:
 
+\---
 
 
-\\- \\\*\\\*Area efficiency\\\*\\\*: Resistors consume large silicon area
 
+\## Gain Limitation in Passive Load CS Amplifier
 
 
-\\- \\\*\\\*Power efficiency\\\*\\\*: Lower voltage drop compared to resistors
 
+For a basic CS amplifier: \\(A\_v ≈ -g\_m \* R\_D\\)
 
 
-\\- \\\*\\\*Higher gain capability\\\*\\\*
 
+\### Limitations:
 
 
-\-–
 
+\#### 1. Increasing \\( R\_D \\)
 
+\- Increases gain
 
-\\## Gain Limitation in Passive Load CS Amplifier
+\- But also increases voltage drop \\( (I\_D \\cdot R\_D) \\)
 
+\- Reduces available drain voltage
 
+\- May push MOSFET out of saturation
 
-For a basic CS amplifier: \\\\A\_v ≈ -g\_m \\\* R\_D\\\\
 
 
+\#### 2. Increasing \\( I\_D \\)
 
-\\### Limitations:
+\- Increases transconductance \\( g\_m \\)
 
+\- Leads to higher power dissipation
 
+\- Increases voltage drop across \\( R\_D \\)
 
-\\#### 1. Increasing \\\\ R\_D \\\\
+\- Again risks leaving saturation region
 
 
 
-\\- Increases gain
+\#### 3. Increasing Supply Voltage
 
+\- Helps maintain saturation
 
+\- Not feasible in modern IC design (low-voltage constraints)
 
-\\- But also increases voltage drop \\\\ (I\_D \\cdot R\_D) \\\\
 
 
+\---
 
-\\- Reduces available drain voltage
 
 
-
-\\- May push MOSFET out of saturation
-
-
-
-\\#### 2. Increasing \\\\ I\_D \\\\
-
-
-
-\\- Increases transconductance \\\\ g\_m \\\\
-
-
-
-\\- Leads to higher power dissipation
-
-
-
-\\- Increases voltage drop across \\\\ R\_D \\\\
-
-
-
-\\- Again risks leaving saturation region
-
-
-
-\\#### 3. Increasing Supply Voltage
-
-
-
-\\- Helps maintain saturation
-
-
-
-\\- Not feasible in modern IC design (low-voltage constraints)
-
-
-
-\-–
-
-
-
-\\## Solution: Active Load
+\## Solution: Active Load
 
 
 
 Active loads eliminate these limitations by:
 
+\- Providing \*\*high output resistance\*\*
 
+\- Maintaining \*\*low voltage drop\*\*
 
-\\- Providing \\\*\\\*high output resistance\\\*\\\*
-
-
-
-\\- Maintaining \\\*\\\*low voltage drop\\\*\\\*
-
-
-
-\\- Enabling \\\*\\\*high gain without large power penalties\\\*\\\*
+\- Enabling \*\*high gain without large power penalties\*\*
 
 
 
-\-–
+\---
 
 
 
-\\## Passive vs Active Load Comparison
+\## Passive vs Active Load Comparison
 
 
 
-Feature \\| Passive Load (Resistor) \\| Active Load (MOSFET) \\|
+| Feature                | Passive Load (Resistor)     | Active Load (MOSFET)        |
+
+|----------------------|-----------------------------|-----------------------------|
+
+| Element Type         | Non-amplifying, dissipative | Has intrinsic gain (gₘ)     |
+
+| Small-Signal Impedance | Fixed = \\( R\_D \\)          | Very high: \\( r\_o = 1 / (\\lambda I\_D) \\) |
+
+| DC Voltage Drop      | Large \\( (I\_D \\cdot R\_D) \\) | Small \\( V\_{DS,sat} \\approx 100–200mV \\) |
+
+| Gain Achievable      | Moderate (\~10–30)           | Very high (\~100–1000)       |
+
+| Typical Use          | Discrete / simple circuits  | VLSI, Op-Amps, OTAs         |
+
+| Power Efficiency     | Low                         | High                        |
 
 
 
-\\|———————-\\|—————————–\\|—————————–\\|
+\---
 
 
 
-Element Type \\| Non-amplifying, dissipative \\| Has intrinsic gain (gₘ)
-
-\\|
+\## Key Insight
 
 
 
-Small-Signal Impedance \\| Fixed = \\\\ R\_D \\\\ \\| Very high: \\\\ r\_o = 1 /
-
-(\\lambda I\_D) \\\\ \\|
-
-
-
-DC Voltage Drop \\| Large \\\\ (I\_D \\cdot R\_D) \\\\ \\| Small \\\\ V\\\_{DS,sat}
-
-\\approx 100–200mV \\\\ \\|
-
-
-
-Gain Achievable \\| Moderate (\~10–30) \\| Very high (\~100–1000) \\|
-
-
-
-Typical Use \\| Discrete / simple circuits \\| VLSI, Op-Amps, OTAs \\|
-
-
-
-Power Efficiency \\| Low \\| High \\|
-
-
-
-\-–
-
-
-
-\\## Key Insight
-
-
-
-> Active loads are fundamental to modern analog IC design because they
-
-> enable \\\*\\\*high gain, compact layout, and power-efficient
-
-> operation\\\*\\\*.
-
-
+> Active loads are fundamental to modern analog IC design because they enable \\\*\\\*high gain, compact layout, and power-efficient operation\\\*\\\*.
 

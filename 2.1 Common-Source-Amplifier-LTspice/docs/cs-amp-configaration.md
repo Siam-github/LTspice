@@ -6,7 +6,7 @@ This document provides a technical overview of Common Source (CS) amplifier conf
 
 In MOSFET amplifier circuits, an **Active Load** uses an active component (like another MOSFET or a current mirror) instead of a passive resistor to increase the amplifier's gain.
 
-![Fig. 1 MOSFET Amplifier with Active Load](https://via.placeholder.com/600x300?text=Fig.+1+MOSFET+Amplifier+with+Active+Load)
+![Fig. 1 MOSFET Amplifier with Active Load](figures\Fig.1 MOSFET Amplifier with Active Load.png)
 
 ## Why Use an Active Load?
 
@@ -20,9 +20,14 @@ Active loads are primarily used in integrated circuits where size and power cons
 
 For a simple CS amplifier with a passive (resistive) load:
 
-`|Av| = gm * (RD || r0)`
+```math
+	|Av| = gm * (RD || r0)
+	If r0 >> RD , then |Av| ≈ gm * RD
+```
 
-If `r0 >> RD`, then `|Av| ≈ gm * RD`
+
+
+
 
 To increase gain, you would typically increase `RD` or `gm`. However:
 
